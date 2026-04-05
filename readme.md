@@ -1,73 +1,63 @@
 <p align="center">
-  <img src="https://www.salabim.org/salabim_logo_payoff.png" alt="salabim logo" width="400"/>
-</p>
-
-<h1 align="center">SalabimPtk</h1>
-
-<p align="center">
-  <strong>Production Simulation powered by salabim</strong>
+  <img src="https://www.salabim.org/salabim_logo_payoff.png" alt="salabim" width="480"/>
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/salabim/"><img src="https://img.shields.io/pypi/v/salabim" alt="PyPI"></a>
-  <a href="https://pypi.org/project/salabim/"><img src="https://img.shields.io/pypi/pyversions/salabim" alt="Python Version"></a>
-  <img src="https://img.shields.io/pypi/l/salabim" alt="License">
-  <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style">
+  <a href="https://pypi.org/project/salabim/"><img src="https://img.shields.io/pypi/v/salabim" alt="PyPI version"></a>&nbsp;
+  <a href="https://pypi.org/project/salabim/"><img src="https://img.shields.io/pypi/pyversions/salabim" alt="Python versions"></a>&nbsp;
+  <img src="https://img.shields.io/pypi/implementation/salabim" alt="Implementation">&nbsp;
+  <img src="https://img.shields.io/pypi/l/salabim" alt="License">&nbsp;
+  <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
 </p>
+
+<p align="center"><em>Production simulation built on salabim -- a Python library for object-oriented discrete event simulation and animation.</em></p>
 
 ---
 
-## About
+## Introduction
 
-SalabimPtk is a production simulation project built on [salabim](https://github.com/salabim/salabim), a discrete event simulation (DES) library for Python. The project focuses on modeling and analyzing production systems -- identifying bottlenecks, evaluating throughput, and optimizing manufacturing workflows.
+Discrete event simulation (DES) finds applications in various logistical domains including production facilities, warehousing, airports, hospitals, mining, materials handling, steel mills, and computer network analysis.
 
-## Why salabim?
+This project applies salabim to **production simulation** -- modeling manufacturing workflows, identifying bottlenecks, and optimizing throughput. Salabim follows a well-proven and intuitive process description method, and the package provides:
 
-Salabim provides an intuitive, process-oriented approach to discrete event simulation without requiring `yield` statements for process control. It includes:
+- **Components** -- model machines, operators, conveyors, and production entities
+- **Queues** -- track WIP, buffers, and waiting lines
+- **Resources** -- represent shared equipment, tools, and personnel
+- **Stores** -- model inventory and material storage
+- **States** -- capture machine states, shift patterns, and system modes
+- **Monitors** -- collect and present data, KPIs, cycle times, and utilization
+- **2D and 3D animation** -- visualization and video production for analysis
+- **Tracing facilities** -- debug and verify simulation logic
+- **Advanced statistical sampling** -- drive stochastic process modeling
 
-| Feature | Description |
-|---|---|
-| **Components** | Model machines, operators, conveyors, and other production entities |
-| **Queues** | Track WIP, buffers, and waiting lines |
-| **Resources** | Represent shared equipment, tools, and personnel |
-| **Stores** | Model inventory and material storage |
-| **States** | Capture machine states, shift patterns, and system modes |
-| **Monitors** | Collect and visualize KPIs like cycle time, utilization, and throughput |
-| **Animation** | 2D/3D visualization and video export for presentations and analysis |
+In contrast to some other Python DES packages, salabim does not require the use of `yield` statements for process control, making it more straightforward to use. Salabim has minimal requirements, especially when animation is disabled.
 
-For full salabim documentation, visit [www.salabim.org/manual](https://www.salabim.org/manual).
+## Features and Documentation
+
+- **Cross-platform**: runs on Windows, macOS, Linux, iOS/iPadOS (Pythonista), and even "Python In Excel"
+- **Comprehensive documentation**: [www.salabim.org/manual](https://www.salabim.org/manual)
 
 ## Getting Started
 
-### Prerequisites
-
-- Python 3.8+
-
-### Installation
+**Prerequisites:** Python 3.8+
 
 ```bash
 pip install salabim
 ```
 
-### Quick Example
-
-```python
-import salabim as sim
-
-env = sim.Environment()
-# Your production model here
-env.run()
-```
+To learn more about salabim, visit [www.salabim.org](https://www.salabim.org) for installation details and tutorials.
 
 ## Project Status
 
-> This project is under active development.
-> Features, models, and documentation will be expanded as the project grows.
+> **This project is under active development.**
+> Models, tooling, and documentation will be expanded as the project grows.
 
-## Acknowledgements
+## Contributing
 
-Built on [salabim](https://github.com/salabim/salabim) by Ruud van der Ham. Salabim is licensed under the MIT License.
+Contributions are welcome. You can open a pull request or submit an issue on [GitHub](https://github.com/Duyfrom/Salabim-ptk).
+
+For questions and discussions about the salabim library itself, see the upstream repo at [salabim/salabim](https://github.com/salabim/salabim) or the [salabim Google user group](https://groups.google.com/g/salabim).
 
 ## License
 
-See [LICENSE](LICENSE) for details.
+Salabim is licensed under the MIT License. See [LICENSE](LICENSE) for details.
