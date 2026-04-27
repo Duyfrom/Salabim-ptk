@@ -23712,12 +23712,19 @@ class AudioClip:
             AudioClip.directsend("stop", self._alias)
             AudioClip.directsend("seek", self._alias, "to start")
 
-    # TODO: this closes the file even if we're still playing.
-    # no good.  detect isplaying(), and don't die till then!
+    def close(self):
+        """Wait for any in-progress playback to finish, then close the underlying file."""
+        if self._alias:
+            while self.isplaying():
+                time.sleep(0.05)
+            AudioClip.directsend("close", self._alias)
+            self._alias = 0
 
-
-#    def __del__(self):
-#        AudioClip.directsend(f"close {self._alias}")
+    def __del__(self):
+        try:
+            self.close()
+        except Exception:
+            pass
 
 
 def audio_duration(filename: str) -> float:
